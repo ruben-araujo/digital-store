@@ -12,7 +12,7 @@ function Header() {
                         <li className="flex-grow">
                             <input
                                 type="text"
-                                className="border rounded-xl w-4/5 px-3 py-3 bg-[var(--light-gray-3)]"
+                                className="border outline-none rounded-xl w-4/5 px-3 py-3 bg-[var(--light-gray-3)]"
                                 placeholder="Pesquisar..."
                             />
                         </li>
