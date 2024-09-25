@@ -1,10 +1,12 @@
 import React from "react";
+import Header from "../components/Header";
 
 // import { Container } from './styles';
 
-const Home = () => {
+function HomePage() {
   return (
     <>
+    <Header />
     <div className="flex items-center justify-center h-screen bg-gradient-to-r from-purple-500 to-indigo-600">
     <h1 className="text-center text-4xl font-serif text-white">
       HOME
@@ -15,4 +17,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomePage;

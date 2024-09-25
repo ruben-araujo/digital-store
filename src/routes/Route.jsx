@@ -1,15 +1,13 @@
-import { createBrowserRouter } from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import HomePage from "../pages/HomePage";
+function AppRoutes() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<HomePage />}></Route>
+      </Routes>
+    </BrowserRouter>
+  );
+}
 
-import Home from "../pages/HomePage";
-import ProductListingPage from "../pages/ProductListingPage";
-
-export const router = createBrowserRouter([
-    {
-        path: "/",
-        element: <Home/>,
-    },
-    {
-        path: "/ProductListingPage",
-        element: <ProductListingPage />
-    }
-])
+export default AppRoutes;
