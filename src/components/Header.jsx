@@ -1,6 +1,7 @@
 import React from "react";
 import Logo from "./Logo";
 import Cart from "../assets/mini-cart.svg";
+import { Link } from "react-router-dom";
 
 function Header() {
     return (
@@ -40,7 +41,7 @@ function Header() {
                         <span className="absolute left-0 right-0 bottom-0 h-0.5 bg-[var(--primary)] transition-all duration-300 ease-in-out w-0 group-hover:w-full" />
                     </li>
                     <li className="relative cursor-pointer text-gray-700 font-bold group">
-                        <span className="block">Produtos</span>
+                        <span className="block"><Link to={'/produtos'}>Produtos</Link></span>
                         <span className="absolute left-0 right-0 bottom-0 h-0.5 bg-[var(--primary)] transition-all duration-300 ease-in-out w-0 group-hover:w-full" />
                     </li>
                     <li className="relative cursor-pointer text-gray-700 font-bold group">

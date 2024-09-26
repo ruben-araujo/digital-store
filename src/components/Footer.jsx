@@ -6,7 +6,7 @@ import digitalLogo from "../assets/Vector.png";
 function Footer() {
   return (
     <footer className="bg-gray-800 text-white py-8 w-full">
-      <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+      <div className="container mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 px-16">
         <div className="space-y-4 py-3">
           <h1 className="font-semibold text-4xl flex items-center">
             <img src={digitalLogo} alt="Logo" className="mr-2" />
