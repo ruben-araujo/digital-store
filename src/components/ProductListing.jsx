@@ -51,15 +51,10 @@ function ProductListing() {
       price: '$100',
       priceDiscount: '$200'
     },
-    {
-      name: "K-Swiss V8 - Masculino",
-      image: tenis,
-      price: '$100',
-      priceDiscount: '$200'
-    },
+
   ]
     return (
-        <div className='flex flex-wrap justify-evenly my-5'>
+        <div className='flex flex-wrap justify-evenly'>
             {products.map((product, index) => (
                 <ProductCard 
                 key={index}

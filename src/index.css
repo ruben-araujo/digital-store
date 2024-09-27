@@ -34,4 +34,6 @@
 
 body {
     background-color: var(--light-gray-3);
+    background-color: #F9F8FE;
+    overflow-x: hidden;
 }
