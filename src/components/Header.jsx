@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 
 function Header() {
     return (
-        <header className="flex flex-col items-center justify-between px-20 py-3 my-2 h-auto">
+        <header className="flex flex-col items-center justify-between px-20 pt-8 pb-4  h-auto bg-[var(--white)]">
             <div className="flex items-center justify-between w-full">
                 <Logo />
                 <nav className="flex-grow mx-4">
@@ -37,7 +37,7 @@ function Header() {
             <nav className="flex space-x-6 mt-4 w-full">
                 <ul className="flex space-x-4 pt-2 pb-1">
                     <li className="relative cursor-pointer text-gray-700 font-bold group">
-                        <span className="block">Home</span>
+                        <span className="block"><Link to={'/'}>Home</Link></span>
                         <span className="absolute left-0 right-0 bottom-0 h-0.5 bg-[var(--primary)] transition-all duration-300 ease-in-out w-0 group-hover:w-full" />
                     </li>
                     <li className="relative cursor-pointer text-gray-700 font-bold group">

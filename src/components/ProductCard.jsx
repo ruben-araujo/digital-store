@@ -1,7 +1,7 @@
 function ProductCard({image, name, price, priceDiscount}) {
     return (
-        <div className="">
-            <img className="bg-red-100 mb-3" src={image} alt="" style={{maxWidth: 292, maxHeight: 321}} />
+        <div className="my-3">
+            <img className="bg-[var(--white)] mb-3" src={image} alt="" style={{maxWidth: 292, maxHeight: 321}} />
             <p>{name}</p>
 
             <div className="space-x-2">
