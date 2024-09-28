@@ -1,18 +1,15 @@
 import React from "react";
-import Header from "../components/Header"
-import Footer from "../components/Footer"
 import ProductListing from "../components/ProductListing";
-
+import Layout from "./Layout";
 
 // import { Container } from './styles';
 
 const ProductListingPage = () => {
-
   return (
     <>
-      <Header />
-      <ProductListing />
-      <Footer />
+      <Layout>
+        <ProductListing />
+      </Layout>
     </>
   );
 };
