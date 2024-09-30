@@ -1,39 +1,39 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-
-
 :root {
-    --primary: #C92071;
-    --secondary: #B5B6F2;
-    --tertiary: #991956;
-    --error: #EE4266;
-    --success: #52CA76;
-    --warning: #F6AA1C;
+  --primary: #c92071;
+  --secondary: #b5b6f2;
+  --tertiary: #991956;
+  --error: #ee4266;
+  --success: #52ca76;
+  --warning: #f6aa1c;
 
-    --dark-gray: #1F1F1F;
-    --dark-gray-2: #474747;
-    --dark-gray-3: #666666;
-    --light-gray: #8F8F8F;
-    --light-gray-2: #CCCCCC;
-    --light-gray-3: #F5F5F5;
-    --white: #FFFFFF;
+  --dark-gray: #1f1f1f;
+  --dark-gray-2: #474747;
+  --dark-gray-3: #666666;
+  --light-gray: #8f8f8f;
+  --light-gray-2: #cccccc;
+  --light-gray-3: #f5f5f5;
+  --white: #ffffff;
 }
 
-*{
-    font-family: "Inter", sans-serif;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    
+* {
+  font-family: "Inter", sans-serif;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    background-color: var(--light-gray-3);
-    background-color: #F9F8FE;
-    overflow-x: hidden;
+  background-color: var(--light-gray-3);
+  background-color: #f9f8fe;
+  overflow-x: hidden;
+}
+
+.w-90.flex-wrap-reverse.flex.justify-center.items-center {
+  background-color: var(--light-gray-3);
 }

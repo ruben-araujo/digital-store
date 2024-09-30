@@ -37,13 +37,13 @@ function FeaturedCollections() {
           />
         </div>
       </div>
-      <div className="container flex flex-col items-center justify-center p-2 my-20">
+      <div className="flex flex-col items-center justify-center p-2 my-20">
         <h3 className="font-bold text-[var(--dark-gray-2)] text-2xl leading-[38px]  tracking-[0.75px] text-left">
           Coleções em destaque
         </h3>
         <div className="flex gap-3 my-10">
           <div className="w-[104px] h-[138px] text-[var(--dark-gray-2)] text-center">
-            <img clasName=" "src={Frame01} alt="camiseta" />
+            <img clasName=" " src={Frame01} alt="camiseta" />
             <p class="font-inter text-xs font-bold leading-[22px] tracking-[0.75px] text-center">
               Camisetas
             </p>

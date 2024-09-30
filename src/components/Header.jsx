@@ -2,19 +2,22 @@ import React from "react";
 import Logo from "./Logo";
 import Cart from "../assets/mini-cart.svg";
 import { Link } from "react-router-dom";
+import lupa from "../assets/lupa.png";
 
 function Header() {
   return (
-    <header className="flex flex-col items-center justify-between px-20 pt-8 pb-4  h-auto bg-[var(--white)]">
+    <header className="flex flex-col items-center justify-between px-24 pt-8 pb-4  h-auto bg-[var(--white)]">
       <div className="flex items-center justify-between w-full">
         <Logo />
         <nav className="flex-grow mx-4">
           <ul className="flex items-center space-x-8">
-            <li className="flex-grow">
+            <li className="flex-grow relative">
+              {" "}
+              {/* Adicionei relative aqui */}
               <input
                 type="text"
-                className="border outline-none rounded-xl w-4/5 px-3 py-3 bg-[var(--light-gray-3)]"
-                placeholder="Pesquisar..."
+                className="border outline-none rounded-xl w-4/5 pl-10 py-4 bg-[var(--light-gray-3)]" // pl-10 para dar espaço à lupa
+                placeholder="Pesquisar produto..."
               />
             </li>
             <li className="text-gray-700 hover:text-gray-900 cursor-pointer">
