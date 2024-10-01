@@ -38,7 +38,7 @@ const ProductListingPage = () => {
     <>
       <Layout>
         <div className="flex mt-6">
-          <div className="bg-white px-4 pt-3 w-[400px] h-fit mx-8">
+          <div className="bg-white hidden lg:block px-4 pt-3 w-[400px] h-fit mx-8">
             <h4 className="text-dark-gray-2 font-semibold">Filtrar por</h4>
             <hr className="border-light-gray-2 my-3" />
             <FilterGroup

@@ -13,7 +13,7 @@ function FeaturedCollections() {
   return (
     <>
       <div className=" container  mx-auto text-left my-10">
-        <h2 className="font-bold text-[var(--dark-gray-2)] text-2xl leading-[38px] mx-[67.547px] tracking-[0.75px] text-left">
+        <h2 className="font-bold text-[var(--dark-gray-2)] text-base lg:text-2xl leading-[38px] mx-8 lg:mx-[67.547px] tracking-[0.75px] text-left">
           Coleções em destaque
         </h2>
         <div className=" w-[90%] flex flex-wrap md:flex-nowrap gap-3 mx-auto">
@@ -37,8 +37,8 @@ function FeaturedCollections() {
           />
         </div>
       </div>
-      <div className="flex flex-col items-center justify-center p-2 my-20">
-        <h3 className="font-bold text-[var(--dark-gray-2)] text-2xl leading-[38px]  tracking-[0.75px] text-left">
+      <div className="flex flex-col items-start lg:items-center justify-center p-2 my-20">
+        <h3 className="font-bold text-[var(--dark-gray-2)] mx-8 text-base lg:text-2xl leading-[38px]  tracking-[0.75px] text-left">
           Coleções em destaque
         </h3>
         <div className="flex gap-3 my-10">
