@@ -83,7 +83,50 @@ const Header = () => {
       </header>
 
       <section className="w-full hidden lg:flex items-start  px-4 lg:px-20  pb-4 h-auto bg-[var(--white)]">
-        <nav className="flex space-x-6 mt-4 w-full float-start"></nav>
+        <nav className="flex space-x-6 mt-4 w-full float-start">
+        <ul className="flex h-3/5 gap-4 items-start space-x-4 pt-2 pb-1">
+              
+
+              <li className="relative cursor-pointer text-gray-700 font-bold group">
+                <span className="block">
+                  <NavLink
+                    to={"/"}
+                    className={({ isActive }) =>
+                      isActive
+                        ? "text-[#C92071] leading-6 text-base cursor-pointer underline animate-none underline-offset-4"
+                        : "text-[#474747] leading-6 text-base cursor-pointer"
+                    }
+                  >
+                    Home
+                  </NavLink>
+                </span>
+                <span className="absolute left-0 right-0 bottom-0 h-0.5 bg-[var(--primary)] transition-all duration-300 ease-in-out w-0 group-hover:w-full" />
+              </li>
+              <li className="relative cursor-pointer text-gray-700 font-bold group">
+                <span className="block">
+                  <NavLink
+                    to={"/produtos"}
+                    className={({ isActive }) =>
+                      isActive
+                        ? "text-[#C92071] leading-6 text-base cursor-pointer underline underline-offset-4"
+                        : "text-[#474747] leading-6 text-base cursor-pointer"
+                    }
+                  >
+                    Produtos
+                  </NavLink>
+                </span>
+                <span className="absolute left-0 right-0 bottom-0 h-0.5 bg-[var(--primary)] transition-all duration-300 ease-in-out w-0 group-hover:w-full" />
+              </li>
+              <li className="relative cursor-pointer text-gray-700 font-bold group">
+                <span className="block">Categorias</span>
+                <span className="absolute left-0 right-0 bottom-0 h-0.5 bg-[var(--primary)] transition-all duration-300 ease-in-out w-0 group-hover:w-full" />
+              </li>
+              <li className="relative cursor-pointer text-gray-700 font-bold group">
+                <span className="block">Meus Pedidos</span>
+                <span className="absolute left-0 right-0 bottom-0 h-0.5 bg-[var(--primary)] transition-all duration-300 ease-in-out w-0 group-hover:w-full" />
+              </li>
+            </ul>
+        </nav>
       </section>
 
       {isSearchBarOpen && (
