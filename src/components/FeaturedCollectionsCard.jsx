@@ -6,7 +6,7 @@ function FeaturedCollectionsCard(props) {
           {props.discount}% OFF
         </span>
 
-        <h2 class="font-inter text-[var(--dark-gray)] text-[32px] font-bold  leading-[36px] text-left w-[172px] ">
+        <h2 className="font-inter text-[var(--dark-gray)] text-[32px] font-bold  leading-[36px] text-left w-[172px] ">
           {props.title}
         </h2>
         <div>

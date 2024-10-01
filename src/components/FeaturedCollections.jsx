@@ -43,32 +43,32 @@ function FeaturedCollections() {
         </h3>
         <div className="flex gap-3 my-10">
           <div className="w-[104px] h-[138px] text-[var(--dark-gray-2)] text-center">
-            <img clasName=" " src={Frame01} alt="camiseta" />
-            <p class="font-inter text-xs font-bold leading-[22px] tracking-[0.75px] text-center">
+            <img clasName=" "src={Frame01} alt="camiseta" />
+            <p className="font-inter text-xs font-bold leading-[22px] tracking-[0.75px] text-center">
               Camisetas
             </p>
           </div>
           <div className="w-[104px] h-[138px] text-[var(--dark-gray-2)] text-center">
             <img clasName="w-[64px] h-[64px]" src={Frame02} alt="calças" />
-            <p class="font-inter text-xs font-bold leading-[22px] tracking-[0.75px] text-center">
+            <p className="font-inter text-xs font-bold leading-[22px] tracking-[0.75px] text-center">
               Calças
             </p>
           </div>
           <div className="w-[104px] h-[138px] text-[var(--dark-gray-2)] text-center">
             <img clasName="w-[64px] h-[64px]" src={Frame02} alt="Bonés" />
-            <p class="font-inter text-xs font-bold leading-[22px] tracking-[0.75px] text-center">
+            <p className="font-inter text-xs font-bold leading-[22px] tracking-[0.75px] text-center">
               Bonés
             </p>
           </div>
           <div className="w-[104px] h-[138px] text-[var(--dark-gray-2)] text-center">
             <img clasName="w-[64px] h-[64px]" src={Frame03} alt="Headphones" />
-            <p class="font-inter text-xs font-bold leading-[22px] tracking-[0.75px] text-center">
+            <p className="font-inter text-xs font-bold leading-[22px] tracking-[0.75px] text-center">
               Headphones
             </p>
           </div>
           <div className="w-[104px] h-[138px] text-[var(--dark-gray-2)] text-center">
             <img clasName="w-[64px] h-[64px]" src={Frame04} alt="Tênis" />
-            <p class="font-inter text-xs font-bold leading-[22px] tracking-[0.75px] text-center">
+            <p className="font-inter text-xs font-bold leading-[22px] tracking-[0.75px] text-center">
               Tênis
             </p>
           </div>
