@@ -2,8 +2,9 @@ import React, { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import Logo from "./Logo";
 import Cart from "../assets/mini-cart.svg";
-import MenuIcon from "../assets/Menu.png"
+import MenuIcon from "../assets/Menu.svg"
 import SearchIcon from "../assets/Search.png"
+import CloseIcon from "../assets/close.svg";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -31,7 +32,7 @@ const Header = () => {
     <div>
       <header className="flex items-center justify-between px-4 lg:px-20 pt-8 pb-4 h-auto bg-[var(--white)]">
         <button onClick={toggleMobileMenu} className="text-gray-700 lg:hidden w-6 h-6">
-          <img src={MenuIcon} alt="menu" />
+         <img src={MenuIcon} alt="abrir menu" />
         </button>
 
         <div className="absolute left-1/2 transform -translate-x-1/2 lg:static lg:transform-none">
