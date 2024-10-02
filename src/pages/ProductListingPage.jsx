@@ -54,7 +54,7 @@ const ProductListingPage = () => {
   return (
     <>
       <Layout>
-        <div className="flex gap-4  my-6 lg:my-0 flex-col lg:flex-row lg:justify-between items-center  w-full   lg:p-20">
+        <div className="flex gap-4 lg:flex-row-reverse  my-6 lg:my-0 flex-col lg:justify-between items-center  w-full   lg:p-20">
           <div className="flex items-center gap-4">
             <div>
               <label className="border-black border p-4 ">

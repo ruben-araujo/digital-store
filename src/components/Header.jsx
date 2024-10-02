@@ -3,8 +3,8 @@ import { Link, NavLink } from "react-router-dom";
 import Logo from "./Logo";
 import Cart from "../assets/mini-cart.svg";
 import MenuIcon from "../assets/Menu.svg"
-import SearchIcon from "../assets/Search.png"
-import CloseIcon from "../assets/close.svg";
+import SearchIcon from "../assets/Search.svg"
+
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -30,8 +30,8 @@ const Header = () => {
 
   return (
     <div>
-      <header className="flex items-center justify-between px-4 lg:px-20 pt-8 pb-4 h-auto bg-[var(--white)]">
-        <button onClick={toggleMobileMenu} className="text-gray-700 lg:hidden w-6 h-6">
+      <header className="flex items-center justify-between px-4 lg:px-20 w-full    h-[70.5px] bg-[var(--white)]">
+        <button onClick={toggleMobileMenu} className="text-gray-700 lg:hidden ">
          <img src={MenuIcon} alt="abrir menu" />
         </button>
 
@@ -147,7 +147,7 @@ const Header = () => {
             onClick={toggleMobileMenu}
           ></div>
 
-          <nav className="lg:hidden bg-[var(--white)] left-0 w-[308px] h-[702px] absolute z-20 p-4">
+          <nav className="lg:hidden bg-[var(--white)] left-0 w-[308px] h-screen absolute z-20 p-4">
             <ul className="flex flex-col h-3/5 gap-4 items-start space-x-4 pt-2 pb-1">
               <span className="font-inter tex-var(--dark-gray-2) mb-3 text-[16px] font-bold leading-6 tracking-wide text-left">
                 Páginas
