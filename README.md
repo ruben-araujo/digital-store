@@ -1,6 +1,6 @@
-# React + Vite
+Projeto - Digital Store
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto está sendo desenvolvido em equipe por 3 pessoas onde estamos desenvolvendo um E-commerce chamado [digital-store].
 
 Currently, two official plugins are available:
 
