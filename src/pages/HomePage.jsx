@@ -4,6 +4,7 @@ import FeaturedCollections from "../components/FeaturedCollections";
 import TrendingProducts from "../components/TrendingProducts";
 import SpecialOffer from "../components/SpecialOffer";
 import Layout from "./Layout";
+import CartModal from "../components/CartModal";
 
 // import { Container } from './styles';
 

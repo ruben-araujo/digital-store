@@ -3,8 +3,8 @@ import ProductListing from "./ProductListing";
 
 function TrendingProducts() {
   return (
-    <section className="container  mx-auto text-left my-10 ">
-      <div className="flex relative  items-center justify-around text-center">
+    <section className="container  mx-auto text-left my-10 w-[90%] ">
+      <div className="flex relative  items-center justify-between text-center ">
         <h2 className="font-bold text-[var(--dark-gray-2)] text-base lg:text-2xl leading-[38px] lg:mx-[67.547px] tracking-[0.75px] text-left">
           Produtos em alta
         </h2>
