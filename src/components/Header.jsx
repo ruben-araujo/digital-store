@@ -2,13 +2,14 @@ import React, { useState, useEffect } from "react";
 import { Link, NavLink } from "react-router-dom";
 import Logo from "./Logo";
 import Cart from "../assets/mini-cart.svg";
-import MenuIcon from "../assets/Menu.svg"
-import SearchIcon from "../assets/Search.svg"
-
+import MenuIcon from "../assets/Menu.svg";
+import SearchIcon from "../assets/Search.svg";
+import CartModal from "./CartModal";
 
 const Header = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSearchBarOpen, setIsSearchBarOpen] = useState(false);
+  const [isCartModalOpen, setIsCartModalOpen] = useState(false);
 
   // Função para alternar o menu no mobile
   const toggleMobileMenu = () => {
@@ -18,6 +19,10 @@ const Header = () => {
   // Função para alternar a barra de pesquisa
   const toggleSearchBar = () => {
     setIsSearchBarOpen(!isSearchBarOpen);
+  };
+
+  const toggleCartModal = () => {
+    setIsCartModalOpen(!isCartModalOpen);
   };
 
   useEffect(() => {
@@ -32,7 +37,7 @@ const Header = () => {
     <div>
       <header className="flex items-center justify-between px-4 lg:px-20 w-full    h-[70.5px] bg-[var(--white)]">
         <button onClick={toggleMobileMenu} className="text-gray-700 lg:hidden ">
-         <img src={MenuIcon} alt="abrir menu" />
+          <img src={MenuIcon} alt="abrir menu" />
         </button>
 
         <div className="absolute left-1/2 transform -translate-x-1/2 lg:static lg:transform-none">
@@ -49,10 +54,17 @@ const Header = () => {
             </button>
 
             <button className="text-gray-700">
-              <img src={Cart} alt="Carrinho" className="w-6 h-6" />
+              <img
+                src={Cart}
+                alt="Carrinho"
+                className="w-6 h-6"
+                onClick={toggleCartModal}
+              />
             </button>
           </div>
         </div>
+
+        {isCartModalOpen && <CartModal />}
 
         {/* Menu Desktop */}
 
@@ -77,7 +89,12 @@ const Header = () => {
               </button>
             </li>
             <li>
-              <img src={Cart} alt="Carrinho" className="ml-6 w-6 h-6" />
+              <img
+                src={Cart}
+                alt="Carrinho"
+                className="ml-6 w-6 h-6"
+                onClick={toggleCartModal}
+              />
             </li>
           </ul>
         </nav>
@@ -85,48 +102,46 @@ const Header = () => {
 
       <section className="w-full hidden lg:flex items-start  px-4 lg:px-20  pb-4 h-auto bg-[var(--white)]">
         <nav className="flex space-x-6 mt-4 w-full float-start">
-        <ul className="flex h-3/5 gap-4 items-start space-x-4 pt-2 pb-1">
-              
-
-              <li className="relative cursor-pointer text-gray-700 font-bold group">
-                <span className="block">
-                  <NavLink
-                    to={"/"}
-                    className={({ isActive }) =>
-                      isActive
-                        ? "text-[#C92071] leading-6 text-base cursor-pointer underline underline-offset-4"
-                        : "text-[#474747] leading-6 text-base cursor-pointer"
-                    }
-                  >
-                    Home
-                  </NavLink>
-                </span>
-                <span className="absolute left-0 right-0 bottom-0 h-0.5 bg-[var(--primary)] transition-all duration-300 ease-in-out w-0 group-hover:w-full" />
-              </li>
-              <li className="relative cursor-pointer text-gray-700 font-bold group">
-                <span className="block">
-                  <NavLink
-                    to={"/produtos"}
-                    className={({ isActive }) =>
-                      isActive
-                        ? "text-[#C92071] leading-6 text-base cursor-pointer underline underline-offset-4"
-                        : "text-[#474747] leading-6 text-base cursor-pointer"
-                    }
-                  >
-                    Produtos
-                  </NavLink>
-                </span>
-                <span className="absolute left-0 right-0 bottom-0 h-0.5 bg-[var(--primary)] transition-all duration-300 ease-in-out w-0 group-hover:w-full" />
-              </li>
-              <li className="relative cursor-pointer text-gray-700 font-bold group">
-                <span className="block">Categorias</span>
-                <span className="absolute left-0 right-0 bottom-0 h-0.5 bg-[var(--primary)] transition-all duration-300 ease-in-out w-0 group-hover:w-full" />
-              </li>
-              <li className="relative cursor-pointer text-gray-700 font-bold group">
-                <span className="block">Meus Pedidos</span>
-                <span className="absolute left-0 right-0 bottom-0 h-0.5 bg-[var(--primary)] transition-all duration-300 ease-in-out w-0 group-hover:w-full" />
-              </li>
-            </ul>
+          <ul className="flex h-3/5 gap-4 items-start space-x-4 pt-2 pb-1">
+            <li className="relative cursor-pointer text-gray-700 font-bold group">
+              <span className="block">
+                <NavLink
+                  to={"/"}
+                  className={({ isActive }) =>
+                    isActive
+                      ? "text-[#C92071] leading-6 text-base cursor-pointer underline underline-offset-4"
+                      : "text-[#474747] leading-6 text-base cursor-pointer"
+                  }
+                >
+                  Home
+                </NavLink>
+              </span>
+              <span className="absolute left-0 right-0 bottom-0 h-0.5 bg-[var(--primary)] transition-all duration-300 ease-in-out w-0 group-hover:w-full" />
+            </li>
+            <li className="relative cursor-pointer text-gray-700 font-bold group">
+              <span className="block">
+                <NavLink
+                  to={"/produtos"}
+                  className={({ isActive }) =>
+                    isActive
+                      ? "text-[#C92071] leading-6 text-base cursor-pointer underline underline-offset-4"
+                      : "text-[#474747] leading-6 text-base cursor-pointer"
+                  }
+                >
+                  Produtos
+                </NavLink>
+              </span>
+              <span className="absolute left-0 right-0 bottom-0 h-0.5 bg-[var(--primary)] transition-all duration-300 ease-in-out w-0 group-hover:w-full" />
+            </li>
+            <li className="relative cursor-pointer text-gray-700 font-bold group">
+              <span className="block">Categorias</span>
+              <span className="absolute left-0 right-0 bottom-0 h-0.5 bg-[var(--primary)] transition-all duration-300 ease-in-out w-0 group-hover:w-full" />
+            </li>
+            <li className="relative cursor-pointer text-gray-700 font-bold group">
+              <span className="block">Meus Pedidos</span>
+              <span className="absolute left-0 right-0 bottom-0 h-0.5 bg-[var(--primary)] transition-all duration-300 ease-in-out w-0 group-hover:w-full" />
+            </li>
+          </ul>
         </nav>
       </section>
 

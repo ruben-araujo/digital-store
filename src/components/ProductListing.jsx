@@ -1,74 +1,20 @@
 import ProductCard from "../components/ProductCard";
-import tenis from "../public/product01.png";
+import { CardsInfo } from "../utils/Products";
 function ProductListing() {
-  const products = [
-    {
-      name: "K-Swiss V8 - Masculino",
-      image: tenis,
-      price: "$100",
-      priceDiscount: "$200",
-      discount: true,
-    },
-    {
-      name: "K-Swiss V8 - Masculino",
-      image: tenis,
-      price: "$100",
-      priceDiscount: "$200",
-      discount: true,
-    },
-    {
-      name: "K-Swiss V8 - Masculino",
-      image: tenis,
-      price: "$100",
-      priceDiscount: "$200",
-      discount: false,
-    },
-    {
-      name: "K-Swiss V8 - Masculino",
-      image: tenis,
-      price: "$100",
-      priceDiscount: "$200",
-      discount: false,
-    },
-    {
-      name: "K-Swiss V8 - Masculino",
-      image: tenis,
-      price: "$100",
-      priceDiscount: "$200",
-      discount: false,
-    },
-    {
-      name: "K-Swiss V8 - Masculino",
-      image: tenis,
-      price: "$100",
-      priceDiscount: "$200",
-      discount: false,
-    },
-    {
-      name: "K-Swiss V8 - Masculino",
-      image: tenis,
-      price: "$100",
-      priceDiscount: "$200",
-      discount: false,
-    },
-    {
-      name: "K-Swiss V8 - Masculino",
-      image: tenis,
-      price: "$100",
-      priceDiscount: "$200",
-      discount: false,
-    },
-  ];
+  
+  
   return (
-    <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 p-4">
-      {products.map((product, index) => (
+    <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 p-4 ">
+      {CardsInfo.map((product) => (
         <ProductCard
-          key={index}
-          name={product.name}
-          image={product.image}
+          key={product.id}
+          name={product.productName}
+          image={product.url}
           price={product.price}
-          priceDiscount={product.priceDiscount}
-          discount = {product.discount}
+          category={product.category}
+          priceDiscount={product.discountPrice}
+          discount = {product.isDiscount}
+          discountPercentual={product.discountPercentual}
         />
       ))}
     </div>

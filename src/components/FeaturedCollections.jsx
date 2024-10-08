@@ -12,7 +12,7 @@ import Frame04 from "../assets/Frame04.svg";
 function FeaturedCollections() {
   return (
     <>
-      <div className=" container  mx-auto text-left my-10">
+      <div className=" container  mx-auto text-left my-10 ">
         <h2 className="font-bold text-[var(--dark-gray-2)] text-base lg:text-2xl leading-[38px] mx-8 lg:mx-[67.547px] tracking-[0.75px] text-left">
           Coleções em destaque
         </h2>
