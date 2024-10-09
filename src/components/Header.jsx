@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { Link, NavLink } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import Logo from "./Logo";
 import Cart from "../assets/mini-cart.svg";
 import MenuIcon from "../assets/Menu.svg";
@@ -81,12 +81,11 @@ const Header = () => {
               <span className="underline">Cadastre-se</span>
             </li>
             <li className="ml-6">
-              <button
+              <NavLink to={"/login"}
                 className="bg-[var(--primary)] text-white font-bold py-2 px-10 rounded-lg hover:bg-[var(--tertiary)] cursor-pointer"
-                onClick={() => alert("Entrar clicado")}
               >
                 Entrar
-              </button>
+              </NavLink >
             </li>
             <li>
               <img
