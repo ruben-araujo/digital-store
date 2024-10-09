@@ -4,13 +4,16 @@ import Input from "../components/Input";
 import FacebookIcon from "../assets/Original.svg"
 import GmailIcon from "../assets/gmail.svg"
 import TenisLogin from "../assets/tenisLogin.png"
+import { NavLink } from "react-router-dom";
 
 export default function LoginPage() {
   return (
     <>
      <header className="flex items-center justify-between px-4 lg:px-20 w-full    h-[70.5px] bg-[var(--white)]">
         <div className="absolute left-1/2 transform -translate-x-1/2 lg:static lg:transform-none lg:w-[172.5px]">
-          <Logo />
+         <NavLink to={"/"}>
+         <Logo />
+          </NavLink> 
         </div>
       </header>
       <section className="w-full px-7 py-12 flex justify-center items-start bg-gradient-to-br from-[#b5b6f2] to-[#f0f0f7] sm:p-15">
