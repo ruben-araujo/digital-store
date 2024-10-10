@@ -25,13 +25,7 @@ const Header = () => {
     setIsCartModalOpen(!isCartModalOpen);
   };
 
-  useEffect(() => {
-    if (isMobileMenuOpen) {
-      document.body.classList.add("overflow-hidden");
-    } else {
-      document.body.classList.remove("overflow-hidden");
-    }
-  }, [isMobileMenuOpen]);
+  
 
   return (
     <div>
@@ -78,14 +72,17 @@ const Header = () => {
               />
             </li>
             <li className="text-gray-700 hover:text-gray-900 cursor-pointer">
-              <span className="underline">Cadastre-se</span>
+              <NavLink to={"/criarConta/formulario"} className="underline">
+                Cadastre-se
+              </NavLink>
             </li>
             <li className="ml-6">
-              <NavLink to={"/login"}
+              <NavLink
+                to={"/login"}
                 className="bg-[var(--primary)] text-white font-bold py-2 px-10 rounded-lg hover:bg-[var(--tertiary)] cursor-pointer"
               >
                 Entrar
-              </NavLink >
+              </NavLink>
             </li>
             <li>
               <img
@@ -208,13 +205,15 @@ const Header = () => {
             </ul>
 
             <div className="flex flex-col items-center gap-4">
-              <button
-                className="bg-[var(--primary)] w-full text-white font-bold py-2 px-10 rounded-lg hover:bg-[var(--tertiary)] cursor-pointer"
-                onClick={() => alert("Entrar clicado")}
-              >
-                Entrar
-              </button>
-              <span className="underline">Cadastre-se</span>
+              <NavLink to={"/login"} className="w-full">
+                <button className="bg-[var(--primary)] w-full text-white font-bold py-2 px-10 rounded-lg hover:bg-[var(--tertiary)] cursor-pointer">
+                  Entrar
+                </button>
+              </NavLink>
+
+              <NavLink to={"/criarConta/formulario"} className="underline">
+                Cadastre-se
+              </NavLink>
             </div>
           </nav>
         </>
