@@ -1,11 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import SimpleHeader from "../components/SimpleHeader";
 import Footer from "../components/Footer";
 import Input from "../components/Input";
 import { NavLink } from "react-router-dom";
 
 export default function CreateAccountForm() {
-  
+  useEffect(() => {
+    document.body.classList.remove("overflow-hidden");
+  }, []);
 
   return (
     <>

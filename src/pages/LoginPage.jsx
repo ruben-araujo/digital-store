@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useContext} from "react";
 import Footer from "../components/Footer";
 import Input from "../components/Input";
 import FacebookIcon from "../assets/Original.svg";
@@ -6,10 +6,12 @@ import GmailIcon from "../assets/gmail.svg";
 import TenisLogin from "../assets/tenisLogin.png";
 import SimpleHeader from "../components/SimpleHeader";
 import { NavLink } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import { Context } from "../contexts/GlobalContexts";
 
 export default function LoginPage() {
-
- 
+  const { setCurrentLocation } = useContext(Context);
+  setCurrentLocation(useLocation());
 
   return (
     <>

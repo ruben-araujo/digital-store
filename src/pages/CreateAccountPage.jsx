@@ -1,4 +1,4 @@
-import React from "react";
+import React,{useContext} from "react";
 import Footer from "../components/Footer";
 import tenisLogin from "../assets/tenisLogin.png";
 import gmailLogin from "../assets/gmail.svg";
@@ -6,9 +6,15 @@ import facebookLogin from "../assets/Original.svg";
 import SimpleHeader from "../components/SimpleHeader";
 import Input from "../components/Input";
 import { NavLink } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import { Context } from "../contexts/GlobalContexts";
+
 
 export default function CreateAccount() {
-  
+    
+    const {setCurrentLocation} = useContext(Context);
+    
+    setCurrentLocation(useLocation())
 
   return (
     <>
