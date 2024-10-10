@@ -1,6 +1,7 @@
 import { useState } from "react"
+import tenis from "../public/product01.png"
 
-export const CartPage = (props) => {
+export const CartPage = () => {
     const [valorBox, setValorBox] = useState(0)
     const removeItemBox = () => {
         if(valorBox > 0) {
@@ -28,12 +29,14 @@ export const CartPage = (props) => {
                 </div>
                 {/* body */}
                 <div className="flex">
-                    <img src={props.image} alt="" />
+                    <div className="bg-indigo-300 border w-[120px] h-[100px] flex justify-center rounded">
+                    <img src={tenis} className="w-auto h-auto  " alt="" />
+                    </div>
 
                     <div className="flex">
-                        <p>{props.title}</p>
-                        <p>{props.cor}</p>
-                        <p>{props.tamanho}</p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
                     </div>
 
                     <div className="flex">
