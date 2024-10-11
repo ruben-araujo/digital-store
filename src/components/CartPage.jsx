@@ -12,19 +12,16 @@ export const CartPage = () => {
         setValorBox(valorBox + 1)
     }
 
-
     return (
         <>
-            <div className="w-3/5 h-80 bg-white px-10 py-10">
-            {/* header */}
+            <div className="w-fit h-80 bg-white px-10 py-10">
+                {/* header */}
                 <div className="flex justify-between pb-5 border-b border-dark-500">
-                    <div>
-                        <h3 className="font-bold">MEU CARRINHO</h3>
-                    </div>
-                    <div className="flex space-x-16">
-                        <h3>QUANTIDADE</h3>
-                        <h3>UNITÁRIO</h3>
-                        <h3>TOTAL</h3>
+                    <h3 className="font-bold">MEU CARRINHO</h3>
+                    <div className="flex justify-between gap-[60px] mr-5">
+                        <span>QUANTIDADE</span>
+                        <span>UNITÁRIO</span>
+                        <span>TOTAL</span>
                     </div>
                 </div>
                 {/* body */}
@@ -33,16 +30,19 @@ export const CartPage = () => {
                     <img src={tenis} className="w-auto h-auto  " alt="" />
                     </div>
 
-                    <div>
+                    <div className="gap-[40px] space-y-3">
                         <p className="font-bold">Titulo Produto</p>
-                        <p>Cor do Produto</p>
-                        <p>Tamanho do Produto</p>
+                        <p className="text-[12px]">Cor: </p>
+                        <p className="text-[12px]">Tamanho: </p>
                     </div>
 
-                    <div className="flex">
-                        <button id="box" className="flex bg-white border w-5 h-5 justify-center p-5 items-center rounded" onClick={removeItemBox}>-</button>
-                        <div id="valueBox" className="flex mx-3 items-center">{valorBox}</div>
-                        <button id="box" className="flex bg-white border w-5 h-5 justify-center p-5 items-center rounded" onClick={addItemBox}>+</button>
+                    <div>
+                        <div className="flex">
+                            <button id="box" className="flex bg-white border w-5 h-5 justify-center p-5 items-center rounded" onClick={removeItemBox}>-</button>
+                            <div id="valueBox" className="flex mx-3 items-center">{valorBox}</div>
+                            <button id="box" className="flex bg-white border w-5 h-5 justify-center p-5 items-center rounded" onClick={addItemBox}>+</button>
+                        </div>
+                        <div className="flex justify-center underline text-[12px] mt-2">Remover item</div>
                     </div>
 
                     <div>
@@ -51,13 +51,24 @@ export const CartPage = () => {
                     <div>
                         <p id="preco" className="fs-1 font-bold">R$ 219,00</p>
                     </div>
-
                 </div>
-
-                    
-                
-
-
+                {/* Footer */}
+                <div className="flex justify-between gap-x-4 mt-4">
+                    <div >
+                        <p className="text-[12px] font-bold mb-1">Cupom de desconto</p>
+                        <div className="flex">
+                            <input type="text" placeholder="Insira seu código" className="border-none outline-none bg-[var(--light-gray-3)] py-4 rounded-lg px-2 mr-2" />
+                            <button className="border-none outline-none bg-[var(--light-gray-3)] py-4 rounded-lg px-8 font-bold text-[var(--primary)]">OK</button>
+                        </div>
+                    </div>
+                    <div >
+                        <p className="text-[12px] font-bold mb-1">Calcular frete</p>
+                        <div className="flex">
+                            <input type="text" placeholder="Insira seu CEP" className="border-none outline-none bg-[var(--light-gray-3)] py-4 rounded-lg px-2 mr-2" />
+                            <button className="border-none outline-none bg-[var(--light-gray-3)] py-4 rounded-lg px-8 font-bold text-[var(--primary)]">OK</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </>
     )
