@@ -26,14 +26,15 @@ export const CartPage = () => {
                 </div>
                 {/* body */}
                 <div className="flex items-center border-b justify-between py-2">
-                    <div className="bg-indigo-300 border w-[120px] h-[90px] my-2 flex justify-center rounded">
-                    <img src={tenis} className="w-auto h-auto  " alt="" />
-                    </div>
-
-                    <div className="gap-[40px] space-y-3">
-                        <p className="font-bold">Titulo Produto</p>
-                        <p className="text-[12px]">Cor: </p>
-                        <p className="text-[12px]">Tamanho: </p>
+                    <div className="flex items-center space-x-3">
+                        <div className="bg-indigo-300 border w-[120px] h-[90px] my-2 flex justify-center rounded">
+                        <img src={tenis} className="w-auto h-auto" alt="" />
+                        </div>
+                        <div className="space-y-3">
+                            <p className="font-bold">Titulo Produto</p>
+                            <p className="text-[12px]">Cor: </p>
+                            <p className="text-[12px]">Tamanho: </p>
+                        </div>
                     </div>
 
                     <div>
@@ -42,7 +43,7 @@ export const CartPage = () => {
                             <div id="valueBox" className="flex mx-3 items-center">{valorBox}</div>
                             <button id="box" className="flex bg-white border w-5 h-5 justify-center p-5 items-center rounded" onClick={addItemBox}>+</button>
                         </div>
-                        <div className="flex justify-center underline text-[12px] mt-2">Remover item</div>
+                        <div className="flex justify-center underline text-[12px] mt-2 cursor-pointer">Remover item</div>
                     </div>
 
                     <div>
@@ -52,20 +53,21 @@ export const CartPage = () => {
                         <p id="preco" className="fs-1 font-bold">R$ 219,00</p>
                     </div>
                 </div>
+
                 {/* Footer */}
                 <div className="flex justify-between gap-x-4 mt-4">
                     <div >
                         <p className="text-[12px] font-bold mb-1">Cupom de desconto</p>
                         <div className="flex">
                             <input type="text" placeholder="Insira seu código" className="border-none outline-none bg-[var(--light-gray-3)] py-4 rounded-lg px-2 mr-2" />
-                            <button className="border-none outline-none bg-[var(--light-gray-3)] py-4 rounded-lg px-8 font-bold text-[var(--primary)]">OK</button>
+                            <button className="border-none outline-none bg-[var(--light-gray-3)] py-4 rounded-lg px-10 font-bold text-[var(--primary)]">OK</button>
                         </div>
                     </div>
                     <div >
                         <p className="text-[12px] font-bold mb-1">Calcular frete</p>
                         <div className="flex">
                             <input type="text" placeholder="Insira seu CEP" className="border-none outline-none bg-[var(--light-gray-3)] py-4 rounded-lg px-2 mr-2" />
-                            <button className="border-none outline-none bg-[var(--light-gray-3)] py-4 rounded-lg px-8 font-bold text-[var(--primary)]">OK</button>
+                            <button className="border-none outline-none bg-[var(--light-gray-3)] py-4 rounded-lg px-10 font-bold text-[var(--primary)]">OK</button>
                         </div>
                     </div>
                 </div>
