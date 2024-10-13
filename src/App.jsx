@@ -1,10 +1,16 @@
 
-import AppRoutes from "./routes/Route"
+import {  GlobalContext } from "./contexts/GlobalContexts";
+import AppRoutes from "./routes/Route";
+
 
 function App() {
+ 
+  
   return (
     <>
-      <AppRoutes />
+      <GlobalContext>
+        <AppRoutes />
+      </GlobalContext>
     </>
   );
 }

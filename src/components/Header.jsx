@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from "react";
-import { Link, NavLink } from "react-router-dom";
+import React, { useState, useEffect, useContext } from "react";
+import { NavLink } from "react-router-dom";
 import Logo from "./Logo";
 import Cart from "../assets/mini-cart.svg";
 import MenuIcon from "../assets/Menu.svg";
 import SearchIcon from "../assets/Search.svg";
 import CartModal from "./CartModal";
+import { Context } from "../contexts/GlobalContexts";
 
 const Header = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const {isMobileMenuOpen, setIsMobileMenuOpen} = useContext(Context)
   const [isSearchBarOpen, setIsSearchBarOpen] = useState(false);
   const [isCartModalOpen, setIsCartModalOpen] = useState(false);
 
@@ -25,13 +26,9 @@ const Header = () => {
     setIsCartModalOpen(!isCartModalOpen);
   };
 
-  useEffect(() => {
-    if (isMobileMenuOpen) {
-      document.body.classList.add("overflow-hidden");
-    } else {
-      document.body.classList.remove("overflow-hidden");
-    }
-  }, [isMobileMenuOpen]);
+  
+
+  
 
   return (
     <div>
@@ -78,15 +75,17 @@ const Header = () => {
               />
             </li>
             <li className="text-gray-700 hover:text-gray-900 cursor-pointer">
-              <span className="underline">Cadastre-se</span>
+              <NavLink to={"/criarConta/formulario"} className="underline">
+                Cadastre-se
+              </NavLink>
             </li>
             <li className="ml-6">
-              <button
+              <NavLink
+                to={"/login"}
                 className="bg-[var(--primary)] text-white font-bold py-2 px-10 rounded-lg hover:bg-[var(--tertiary)] cursor-pointer"
-                onClick={() => alert("Entrar clicado")}
               >
                 Entrar
-              </button>
+              </NavLink>
             </li>
             <li>
               <img
@@ -192,6 +191,7 @@ const Header = () => {
                         ? "text-[#C92071] leading-6 text-base cursor-pointer underline underline-offset-4"
                         : "text-[#474747] leading-6 text-base cursor-pointer"
                     }
+                   
                   >
                     Produtos
                   </NavLink>
@@ -209,13 +209,15 @@ const Header = () => {
             </ul>
 
             <div className="flex flex-col items-center gap-4">
-              <button
-                className="bg-[var(--primary)] w-full text-white font-bold py-2 px-10 rounded-lg hover:bg-[var(--tertiary)] cursor-pointer"
-                onClick={() => alert("Entrar clicado")}
-              >
-                Entrar
-              </button>
-              <span className="underline">Cadastre-se</span>
+              <NavLink to={"/login"} className="w-full" >
+                <button className="bg-[var(--primary)] w-full text-white font-bold py-2 px-10 rounded-lg hover:bg-[var(--tertiary)] cursor-pointer">
+                  Entrar
+                </button>
+              </NavLink>
+
+              <NavLink to={"/criarConta/formulario"} className="underline" >
+                Cadastre-se
+              </NavLink>
             </div>
           </nav>
         </>
