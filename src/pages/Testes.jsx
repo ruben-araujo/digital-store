@@ -1,9 +1,9 @@
-import { CartPage } from "../components/CartPage"
+import TableCart, { CartPage } from "../components/CartPage"
 
 export const Testes = () => {
     return (
         <>
-            <CartPage/>
+            <TableCart/>
         </>
     )
 }
