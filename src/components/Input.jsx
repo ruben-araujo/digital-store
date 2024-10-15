@@ -8,7 +8,7 @@ export default function Input(props) {
           {props.title}
         </label>
         <input
-          className="w-full p-3 rounded text-[14px] lg:text-[16px] text-[#666666] bg-none focus:outline-none"
+          className="w-full p-3 rounded text-[14px] lg:text-[16px] text-[#666666] bg-[var(--light-gray-3)] focus:outline-none"
           type={props.type}
           name={props.name}
           id={props.id}
