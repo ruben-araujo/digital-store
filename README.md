@@ -1,6 +1,4 @@
-Projeto - Digital Store
-
-Este projeto está sendo desenvolvido em equipe por 3 pessoas onde estamos desenvolvendo um E-commerce chamado [digital-store].
+Drip Store é uma loja de sapatos esportivos desenvolvido inicialmente com o front-end, utilizando React com Javascript. O projeto tem como objetivo de aplicar os conhecimentos adqueridos na formação do curso Desenvolvimento Web Full Stack, ofertado pelo o Governo do Estado do Ceará com parceira da escola Digital College.
 
 ESTAMOS UTILIZANDO TECNOLOGIAS COMO REACT, VITE, JAVASCRIPT, TAILWIND.
 
