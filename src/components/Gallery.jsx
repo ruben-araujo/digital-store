@@ -39,7 +39,7 @@ export default function Gallery({ slides }) {
   };
 
   return (
-    <div className='max-w-[1440px] h-[681px] w-full pb-16 relative group'>
+    <div className='max-w-[1440px] mx-auto h-[681px] w-full pb-16 relative group'>
       {slides && slides.length > 0 ? (
         <>
           <div
