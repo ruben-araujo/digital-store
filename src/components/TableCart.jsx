@@ -1,20 +1,15 @@
+
 import { useState } from "react";
-import tenis from "../public/product01.png";
+import { TableRow } from "./TableRow";
 
 export const TableCart = () => {
-  const [valorBox, setValorBox] = useState(0);
-  const removeItemBox = () => {
-    if (valorBox > 0) {
-      setValorBox(valorBox - 1);
-    }
-  };
-  const addItemBox = () => {
-    setValorBox(valorBox + 1);
-  };
+const [cart, setCart] = useState([1])
+
+
 
   return (
-    <div className="flex gap-3">
-      <div className="w-fit bg-white rounded px-4 py-5">
+    <div className="flex gap-3 overflow-x-scroll">
+      <div className="w-fit bg-white rounded px-4 py-5 flex">
         <table className="w-full border-collapse">
           <thead>
             <tr>
@@ -31,52 +26,20 @@ export const TableCart = () => {
             </tr>
           </thead>
           <tbody>
-            <tr className="border-b border-t border-gray-200">
-              <td className="flex items-center px-auto py-2">
-                <div className="bg-indigo-300 border max-w-[130px] max-h-[110px] my-2 flex justify-center rounded mr-3 p-1">
-                  <img src={tenis} className="w-auto h-auto" alt="" />
-                </div>
-                <div className="space-y-auto">
-                  <p className="font-bold max-w-[14em]">
-                    Tênis Nike Revolution 6 Next Nature Masculino
-                  </p>
-                  <p className="text-[12px]">Cor:</p>
-                  <p className="text-[12px]">Tamanho:</p>
-                </div>
-              </td>
-
-              <td className="text-center px-auto py-2">
-                <div className="flex items-center justify-center">
-                  <button
-                    className="bg-white border w-8 h-8 flex justify-center items-center rounded"
-                    onClick={removeItemBox}
-                  >
-                    -
-                  </button>
-                  <div className="mx-3">{valorBox}</div>
-                  <button
-                    className="bg-white border w-8 h-8 flex justify-center items-center rounded"
-                    onClick={addItemBox}
-                  >
-                    +
-                  </button>
-                </div>
-                <div className="underline text-[12px] mt-2 cursor-pointer">
-                  Remover item
-                </div>
-              </td>
-
-              <td className="text-center px-auto py-2">
-                <p className="font-bold">R$ 219,00</p>
-              </td>
-
-              <td className="text-center px-auto py-2">
-                <p className="font-bold">R$ 219,00</p>
-              </td>
-            </tr>
+            {cart.map((item) => (
+              <TableRow/>
+            ))}
+            {cart.length === 0 && (
+              <tr>
+                <td colSpan={4} style={{textAlign: 'center', fontWeight: 'lighter'}}>
+                  <b>Carrinho de Compras Vazio.</b>
+                </td>
+              </tr>
+            )}
+            
           </tbody>
 
-          <tfoot>
+          <tfoot className="mt-auto">
             <tr>
               <td colSpan="2" className="px-4 py-2">
                 <div className="flex-1">
