@@ -41,7 +41,7 @@ const BuyBox = () => {
         <p className="text-light-gray font-semibold mt-5">Descrição do produto</p>
         <p className="w-80 text-justify">{produto.description}</p>
         <ProductOptions cor={produto.colorOptions} tamanho={produto.sizeOptions} />
-        <button className="w-full p-2 bg-warning rounded-xl text-white font-semibold px-12 mt-5 hover:bg-white hover:text-warning border border-warning">Comprar</button>
+        <button className="w-full p-2 bg-[var(--warning)] rounded-xl text-white font-semibold px-12 mt-5 border border-warning">Comprar</button>
       </div>
     </div>
 

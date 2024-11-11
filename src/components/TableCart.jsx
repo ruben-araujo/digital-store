@@ -3,7 +3,13 @@ import { useState } from "react";
 import { TableRow } from "./TableRow";
 
 export const TableCart = () => {
-const [cart, setCart] = useState([1])
+const [cart, setCart] = useState([1,2,3,4])
+
+const clearCart = () => {
+  if(cart.length > 0) {
+    setCart([])
+  }
+}
 
 
 
@@ -108,7 +114,7 @@ const [cart, setCart] = useState([1])
           </div>
         </div>
         <div className="flex justify-center">
-          <button className="bg-[var(--warning)] w-[274px] rounded-md leading-9 font-bold text-[var(--white)]">
+          <button onClick={clearCart} className="bg-[var(--warning)] w-[274px] rounded-md leading-9 font-bold text-[var(--white)]">
             Continuar
           </button>
         </div>
