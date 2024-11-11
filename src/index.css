@@ -37,3 +37,16 @@ body {
 .w-90.flex-wrap-reverse.flex.justify-center.items-center {
   background-color: var(--light-gray-3);
 }
+
+
+/* Remove as setas do input tipo número para navegadores baseados no WebKit (Chrome, Safari) */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Remove as setas do input tipo número para Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}

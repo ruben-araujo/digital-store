@@ -9,6 +9,7 @@ import CreateAccount from "../pages/CreateAccountPage";
 import CreateAccountForm from "../pages/CreateAccountFormPage";
 import ProductsPage from "../pages/ProductsPage";
 import ScrollToTop from "../components/ScrollToTop";
+import { FinalizingPurchaseForm } from "../pages/FinalizingPurchaseForm";
 function AppRoutes() {
   return (
     <BrowserRouter>
@@ -20,6 +21,7 @@ function AppRoutes() {
         <Route path="/products" element={<ProductsPage/>} />
         <Route path="/testes" element={<Testes />}/>     
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/compras" element={<FinalizingPurchaseForm />} />
         <Route path="/criarConta" element={<CreateAccount />} />
         <Route path="/criarConta/formulario" element={<CreateAccountForm/>}/>
         <Route path='*' element={<Navigate to='/home' />} />
