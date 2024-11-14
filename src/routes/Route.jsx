@@ -12,6 +12,7 @@ import ScrollToTop from "../components/ScrollToTop";
 import { FinalizingPurchaseForm } from "../pages/FinalizingPurchaseForm";
 import { PurchaseConfirmation } from "../pages/PurchaseConfirmation";
 import Layout from "../pages/Layout";
+import { MyOrders } from "../pages/MyOrders";
 function AppRoutes() {
   return (
     <BrowserRouter>
@@ -23,6 +24,7 @@ function AppRoutes() {
           <Route path="/produtos" element={<ProductListingPage />} />
           <Route path="/product-view/:id" element={<ProductViewPage />} />
           <Route path="/products" element={<ProductsPage />} />
+          <Route path="/meus-pedidos" element={<MyOrders />} />
           <Route path="/testes" element={<Testes />} />
           <Route path="/compras" element={<FinalizingPurchaseForm />} />
           <Route path="/confirmacao" element={<PurchaseConfirmation />} />
