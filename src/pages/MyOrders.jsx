@@ -6,18 +6,18 @@ export const MyOrders = () => {
       <section className="border w-[334px] h-[286px] bg-[var(--white)]">
         <ul className="px-5 pt-7 space-y-3 flex flex-col justify-between">
           <li className="text-[var(--dark-gray)] font-semibold border-b border-gray-300 py-3 flex justify-between items-center">
-            Meu Perfil
+            <Link to={"/perfil"}>Meu Perfil</Link>
           </li>
-          
-              <li className="text-[var(--dark-gray)] border-b border-gray-300 py-3 flex justify-between items-center">
-              <Link to={"/meus-pedidos"}>Meus Pedidos</Link>
-              </li>
-          
+
           <li className="text-[var(--dark-gray)] border-b border-gray-300 py-3 flex justify-between items-center">
-            Minhas Informações
+            <Link to={"/meus-pedidos"}>Meus Pedidos</Link>
+          </li>
+
+          <li className="text-[var(--dark-gray)] border-b border-gray-300 py-3 flex justify-between items-center">
+            <Link to={"/minhas-informacoes"}>Minhas Informações</Link>
           </li>
           <li className="text-[var(--dark-gray)]  py-3 flex justify-between items-center">
-            Métodos de Pagamento
+            <Link to={"/metodos-de-pagamento"}>Métodos de Pagamento</Link>
           </li>
         </ul>
       </section>
