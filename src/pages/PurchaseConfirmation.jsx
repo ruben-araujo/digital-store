@@ -29,62 +29,43 @@ export const PurchaseConfirmation = () => {
     ];
     
     return ( 
-        <>
-            <section className="w-[838px] h-[max-content] bg-[var(--white)] mx-auto py-2 space-y-3 px-8">
-                {/* icon */}
-                <div className="icon text-[80px] flex mx-auto justify-center  w-[80%]">
-                    <span className="flex">&#127881;</span>
-                </div>
-                {/* Title */}
-                <div className="flex justify-center">
-                    <h3 className="text-3xl font-bold leading-9 tracking-widest text-center">Compra Realizada <br/> com sucesso!</h3>
-                </div>
-                <div className="border border-solid border-gray-400"></div>
-                {/* Informações Pessoais */}
-                <div className="w-[778px] space-y-1 mx-auto">
-                    <h4 className="text-[var(--dark-gray-2)] text-base font-bold">Informações Pessoais</h4>
+        <section className="w-[838px] bg-[var(--white)] mx-auto py-6 px-8 space-y-6">
+            {/* Icon */}
+            <div className="icon text-[80px] flex justify-center w-[80%] mx-auto">
+                <span className="flex">&#127881;</span>
+            </div>
+            
+            {/* Title */}
+            <div className="flex justify-center">
+                <h3 className="text-3xl font-bold leading-9 tracking-widest text-center">Compra Realizada <br/> com sucesso!</h3>
+            </div>
+            
+            {/* Mapeamento das Seções de Informação */}
+            {purchaseInfo.map((section, index) => (
+                <div key={index} className="w-[778px] mx-auto space-y-2">
+                    <h4 className="text-[var(--dark-gray-2)] text-base font-bold">{section.section}</h4>
                     <div className="flex flex-col text-sm text-gray-400 space-y-1">
-                        <span>Nome:</span>
-                        <span>CPF:</span>
-                        <span>Email:</span>
-                        <span>Celular:</span>
+                        {section.details.map((detail, idx) => (
+                            <span key={idx}>{detail.label}: {detail.value}</span>
+                        ))}
                     </div>
+                    <div className="border-t border-gray-300 my-4"></div>
                 </div>
-                <div className="border border-solid border-gray-400"></div>
-                {/* Informações de Entrega */}
-                <div className="w-[778px] space-y-1 mx-auto">
-                    <h4 className="text-[var(--dark-gray-2)] text-base font-bold">Informações de Entrega</h4>
-                    <div className="flex flex-col text-sm text-gray-400 space-y-1">
-                        <span>Endereço:</span>
-                        <span>Bairro:</span>
-                        <span>Cidade:</span>
-                        <span>CEP:</span>
-                    </div>
+            ))}
+            
+            {/* Resumo da Compra */}
+            <h4 className="text-[var(--dark-gray-2)] text-sm font-bold">Resumo da compra</h4>
+            <div>card do produto</div>
+            
+            <div className="bg-[#f6aa1c18] border border-[#f6aa1c4d] p-3 rounded-md space-y-4">
+                <div className="flex justify-between text-2xl font-bold">
+                    <h1>Total</h1>
+                    <h1>R$: 219,00</h1>
                 </div>
-                <div className="border border-solid border-gray-400"></div>
-                {/* Informações de Pagamento */}
-                <div className="w-[778px] space-y-1 mx-auto">
-                    <h4 className="text-[var(--dark-gray-2)] text-base font-bold">Informações de Pagamento</h4>
-                    <div className="flex flex-col text-sm text-gray-400 space-y-1">
-                        <span>Titular do Cartão:</span>
-                        <span>Final:</span>
-                    </div>
+                <div className="flex justify-end text-gray-400 text-sm">
+                    ou 10x de R$ 21,00 sem juros
                 </div>
-                <div className="border border-solid border-gray-400"></div>
-                <h4 className="text-[var(--dark-gray-2)] text-sm font-bold">Resumo da compra</h4>
-                <div >
-                    card do produto
-                </div>
-                <div className="bg-[#f6aa1c18] border border-[#f6aa1c4d] p-3 space-y-4 rounded-md">
-                    <div className="flex justify-between text-2xl font-bold">
-                        <h1>Total</h1>
-                        <h1>R$: 219,00</h1>
-                    </div>
-                    <div className="flex justify-end text-gray-400 text-sm">
-                        ou 10x de R$ 21,00 sem juros
-                    </div>
-                </div>
-            </section>
-        </>
-     );
+            </div>
+        </section>
+    );
 }
