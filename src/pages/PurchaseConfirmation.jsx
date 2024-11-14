@@ -57,7 +57,7 @@ export const PurchaseConfirmation = () => {
             <h4 className="text-[var(--dark-gray-2)] text-sm font-bold">Resumo da compra</h4>
             <div>card do produto</div>
             
-            <div className="bg-[#f6aa1c18] border border-[#f6aa1c4d] p-3 rounded-md space-y-4">
+            <div className="bg-[#f6aa1c18] border border-[#f6aa1c4d] px-4 py-3 rounded-md space-y-4">
                 <div className="flex justify-between text-2xl font-bold">
                     <h1>Total</h1>
                     <h1>R$: 219,00</h1>
@@ -65,6 +65,9 @@ export const PurchaseConfirmation = () => {
                 <div className="flex justify-end text-gray-400 text-sm">
                     ou 10x de R$ 21,00 sem juros
                 </div>
+            </div>
+            <div className="flex justify-center underline">
+                <a href="#">Imprimir Recibo</a>
             </div>
         </section>
     );
