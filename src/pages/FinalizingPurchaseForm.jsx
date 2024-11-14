@@ -4,7 +4,8 @@ import Input, { Radio } from "../components/Input"
 // type, id, name, title, placeholder
 export const FinalizingPurchaseForm = () => {
     return (
-        <>
+        <div className="ml-20 my-10">
+            <h1 className="text-3xl font-bold mb-5">Finalizar Compra</h1>
             <form className="space-y-3">
                 {/* Informações Pessoais */}
                 <div className="bg-[var(--white)] space-y-7 w-[750px] h-[538px] p-[30px] rounded">
@@ -137,6 +138,6 @@ export const FinalizingPurchaseForm = () => {
                         </div>
                 </div>
             </form>
-        </>
+        </div>
     )
 }
