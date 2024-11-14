@@ -3,7 +3,7 @@ import { BrowserRouter, Route, Routes, Navigate } from "react-router-dom";
 import HomePage from "../pages/HomePage";
 import ProductListingPage from "../pages/ProductListingPage";
 import ProductViewPage from "../pages/ProductViewPage";
-import { Testes } from "../pages/Testes";
+import EditableField from "../pages/Testes";
 import LoginPage from "../pages/LoginPage";
 import CreateAccount from "../pages/CreateAccountPage";
 import CreateAccountForm from "../pages/CreateAccountFormPage";
@@ -13,6 +13,7 @@ import { FinalizingPurchaseForm } from "../pages/FinalizingPurchaseForm";
 import { PurchaseConfirmation } from "../pages/PurchaseConfirmation";
 import Layout from "../pages/Layout";
 import { MyOrders } from "../pages/MyOrders";
+import { MyProfile } from "../pages/MyProfile";
 function AppRoutes() {
   return (
     <BrowserRouter>
@@ -25,7 +26,8 @@ function AppRoutes() {
           <Route path="/product-view/:id" element={<ProductViewPage />} />
           <Route path="/products" element={<ProductsPage />} />
           <Route path="/meus-pedidos" element={<MyOrders />} />
-          <Route path="/testes" element={<Testes />} />
+          <Route path="/minhas-informacoes" element={<MyProfile />} />
+          <Route path="/testes" element={<EditableField />} />
           <Route path="/compras" element={<FinalizingPurchaseForm />} />
           <Route path="/confirmacao" element={<PurchaseConfirmation />} />
           <Route path="*" element={<Navigate to="/home" />} />

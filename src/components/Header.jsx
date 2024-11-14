@@ -137,7 +137,18 @@ const Header = () => {
               <span className="absolute left-0 right-0 bottom-0 h-0.5 bg-[var(--primary)] transition-all duration-300 ease-in-out w-0 group-hover:w-full" />
             </li>
             <li className="relative cursor-pointer text-gray-700 font-bold group">
-              <span className="block">Meus Pedidos</span>
+              <span className="block">
+              <NavLink
+                  to={"/meus-pedidos"}
+                  className={({ isActive }) =>
+                    isActive
+                      ? "text-[#C92071] leading-6 text-base cursor-pointer underline underline-offset-4"
+                      : "text-[#474747] leading-6 text-base cursor-pointer"
+                  }
+                >
+                  Meus Pedidos
+                </NavLink>
+              </span>
               <span className="absolute left-0 right-0 bottom-0 h-0.5 bg-[var(--primary)] transition-all duration-300 ease-in-out w-0 group-hover:w-full" />
             </li>
           </ul>

@@ -1,6 +1,6 @@
 import { MenuProfile } from "../components/MenuProfile";
 
-export const MyOrders = () => {
+export const MyProfile = () => {
   return (
     <div className="flex h-[84vh] justify-around py-4">
       <MenuProfile/>
@@ -8,8 +8,8 @@ export const MyOrders = () => {
         <table className="w-full">
           <thead className="border-b">
             <tr>
-              <th className="text-left p-4">Meus Pedidos</th>
-              <th className="text-right p-4 font-normal">STATUS</th>
+              <th className="text-left p-4">Minhas Informações</th>
+              <th className="text-right p-4"><a className="text-[var(--primary)] underline cursor-pointer">Editar</a></th>
             </tr>
           </thead>
           <tbody>
