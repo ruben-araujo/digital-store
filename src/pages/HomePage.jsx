@@ -5,7 +5,6 @@ import Hero from "../components/Hero";
 import FeaturedCollections from "../components/FeaturedCollections";
 import TrendingProducts from "../components/TrendingProducts";
 import SpecialOffer from "../components/SpecialOffer";
-import Layout from "./Layout";
 import Gallery from "../components/Gallery";
 
 
@@ -17,7 +16,6 @@ function HomePage() {
 
   return (
     <>
-      <Layout>
         <Gallery
           slides={[
             '/src/public/home-slide-1.jpeg',
@@ -34,7 +32,6 @@ function HomePage() {
         <FeaturedCollections />
         <TrendingProducts />
         <SpecialOffer />
-      </Layout>
     </>
   );
 }

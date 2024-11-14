@@ -11,23 +11,29 @@ import ProductsPage from "../pages/ProductsPage";
 import ScrollToTop from "../components/ScrollToTop";
 import { FinalizingPurchaseForm } from "../pages/FinalizingPurchaseForm";
 import { PurchaseConfirmation } from "../pages/PurchaseConfirmation";
+import Layout from "../pages/Layout";
 function AppRoutes() {
   return (
     <BrowserRouter>
-    <ScrollToTop />
+      <ScrollToTop />
       <Routes>
-        <Route path="/" element={<HomePage />}/>
-        <Route path="/produtos" element={<ProductListingPage />} />
-        <Route path='/product-view/:id' element={<ProductViewPage/>} />
-        <Route path="/products" element={<ProductsPage/>} />
-        <Route path="/testes" element={<Testes />}/>     
+        <Route path="/" element={<Layout />}>
+          <Route path="/home" element={<HomePage />} />
+          <Route path="/produtos" element={<ProductListingPage />} />
+          <Route path="/product-view/:id" element={<ProductViewPage />} />
+          <Route path="/products" element={<ProductsPage />} />
+          <Route path="/testes" element={<Testes />} />
+          <Route path="/compras" element={<FinalizingPurchaseForm />} />
+          <Route path="/confirmacao" element={<PurchaseConfirmation />} />
+          <Route path="*" element={<Navigate to="/home" />} />
+        </Route>
+        <Route
+            path="/criarConta/formulario"
+            element={<CreateAccountForm />}
+          />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/compras" element={<FinalizingPurchaseForm />} />
-        <Route path="/confirmacao" element={<PurchaseConfirmation />} />
         <Route path="/criarConta" element={<CreateAccount />} />
-        <Route path="/criarConta/formulario" element={<CreateAccountForm/>}/>
-        <Route path='*' element={<Navigate to='/home' />} />
-      </Routes>
+      </Routes>     
     </BrowserRouter>
   );
 }

@@ -105,7 +105,7 @@ const Header = () => {
             <li className="relative cursor-pointer text-gray-700 font-bold group">
               <span className="block">
                 <NavLink
-                  to={"/"}
+                  to={"/home"}
                   className={({ isActive }) =>
                     isActive
                       ? "text-[#C92071] leading-6 text-base cursor-pointer underline underline-offset-4"
