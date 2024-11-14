@@ -6,7 +6,7 @@ Drip Store é uma loja de sapatos esportivos desenvolvido inicialmente com o fro
 ESTAMOS UTILIZANDO TECNOLOGIAS COMO REACT, VITE, JAVASCRIPT, TAILWIND.
 
 
-
+<h2>Estrutura de pastas</h2>
 
 |    ├── .Digital-store-oficial
 <br/>
