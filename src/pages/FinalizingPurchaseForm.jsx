@@ -31,8 +31,8 @@ export const FinalizingPurchaseForm = () => {
                     <Input
                     id={'tel'}
                     title={'Celular *'}
-                    type={'tel'}
-                    placeholder={'Insira seu Celular *'}
+                    type={'number'}
+                    placeholder={'Insira seu Celular'}
                      />
                 </div>
 
@@ -62,13 +62,13 @@ export const FinalizingPurchaseForm = () => {
                     id={'cep'}
                     title={'CEP *'}
                     type={'tel'}
-                    placeholder={'Insira seu Celular *'}
+                    placeholder={'Insira seu CEP'}
                      />
                     <Input
                     id={'complemento'}
                     title={'Complemento *'}
                     type={'text'}
-                    placeholder={'Insira complemento *'}
+                    placeholder={'Insira complemento'}
                      />
                 </div>
                 {/* Informações de Pagamento */}
@@ -81,11 +81,13 @@ export const FinalizingPurchaseForm = () => {
                         id={'cartao-credito'}
                         title={'Cartão de Crédito'}
                         type={'radio'}
+                        name={'formaDePagamento'}
                         />
                         <Radio
                         id={'boleto'}
                         title={'Boleto'}
                         type={'radio'}
+                        name={'formaDePagamento'}
                         />
                     </div>
                     <Input
@@ -112,6 +114,7 @@ export const FinalizingPurchaseForm = () => {
                         <Input
                         id={'cvv'}
                         title={'CVV *'}
+                        type={'number'}
                         placeholder={'CVV'}
                         
                         />
