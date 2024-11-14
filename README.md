@@ -3,7 +3,9 @@
 
 <p>Drip Store é uma loja de sapatos esportivos desenvolvido inicialmente com o front-end, utilizando React com Javascript. O projeto tem como objetivo de aplicar os conhecimentos adqueridos na formação do curso Desenvolvimento Web Full Stack, ofertado pelo o Governo do Estado do Ceará com parceira da escola Digital College.<p/>
 
-ESTAMOS UTILIZANDO TECNOLOGIAS COMO REACT, VITE, JAVASCRIPT, TAILWIND.
+<h3>Tecnologias Utilizadas</h3>
+<br/>
+![JavaScript](https://img.shields.io/badge/-JavaScript-05122A?style=flat&logo=javascript)&nbsp;
 
 
 <h2>Estrutura de pastas</h2>
