@@ -17,6 +17,7 @@ function AppRoutes() {
     <BrowserRouter>
       <ScrollToTop />
       <Routes>
+        <Route path="/" element={<Navigate to="/home" replace />} />
         <Route path="/" element={<Layout />}>
           <Route path="/home" element={<HomePage />} />
           <Route path="/produtos" element={<ProductListingPage />} />
@@ -27,13 +28,10 @@ function AppRoutes() {
           <Route path="/confirmacao" element={<PurchaseConfirmation />} />
           <Route path="*" element={<Navigate to="/home" />} />
         </Route>
-        <Route
-            path="/criarConta/formulario"
-            element={<CreateAccountForm />}
-          />
+        <Route path="/criarConta/formulario" element={<CreateAccountForm />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/criarConta" element={<CreateAccount />} />
-      </Routes>     
+      </Routes>
     </BrowserRouter>
   );
 }
