@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 export const PurchaseConfirmation = () => {
     const purchaseInfo = [
         {
@@ -29,7 +31,7 @@ export const PurchaseConfirmation = () => {
     ];
     
     return ( 
-        <div className="px-4">
+        <div className="px-4 py-16">
             <section className="max-w-lg lg:max-w-2xl bg-[var(--white)] mx-auto py-6 px-6 lg:px-8 space-y-6 rounded-md shadow-md">
                 {/* Icon */}
                 <div className="icon text-6xl lg:text-[80px] flex justify-center mx-auto">
@@ -78,7 +80,7 @@ export const PurchaseConfirmation = () => {
 
             {/* Botão Voltar para Home */}
             <div className="flex justify-center mt-4">
-                <button className="text-white rounded-md py-2 w-full max-w-lg lg:max-w-2xl bg-[var(--warning)]">Voltar para Home</button>
+                <Link className="text-white rounded-md text-center py-2 w-full max-w-lg lg:max-w-2xl bg-[var(--warning)]"  to={"/home"}>Voltar para Home</Link>
             </div>
         </div>
     );
