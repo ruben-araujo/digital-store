@@ -8,7 +8,7 @@ export const MenuProfile = () => {
   };
   return (
     <>
-      <section className="border w-[334px] h-[286px] bg-[var(--white)]">
+      <section className=" w-[334px] h-[286px] bg-[var(--white)] rounded-md">
         <ul className="px-5 pt-7 space-y-3 flex flex-col justify-between">
           <li className="text-[var(--dark-gray)] font-semibold border-b border-gray-300 py-3 flex justify-between items-center">
             <NavLink to={"/perfil"} className={({ isActive }) => isActive ? 'text-[var(--primary)] font-bold' : ''}>Meu Perfil</NavLink>
