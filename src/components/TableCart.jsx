@@ -1,5 +1,7 @@
 import { useState } from "react";
 import tenis from "../public/product01.png";
+import { formatToBRL } from "../utils/FormatToBRL";
+import ProductItens from "../database/ProductItens";
 
 export const TableCart = () => {
   const [valorBox, setValorBox] = useState(0);
@@ -31,49 +33,55 @@ export const TableCart = () => {
             </tr>
           </thead>
           <tbody>
-            <tr className="border-b border-t border-gray-200">
-              <td className="flex items-center px-auto py-2">
-                <div className="bg-indigo-300 border max-w-[130px] max-h-[110px] my-2 flex justify-center rounded mr-3 p-1">
-                  <img src={tenis} className="w-auto h-auto" alt="" />
-                </div>
-                <div className="space-y-auto">
-                  <p className="font-bold max-w-[14em]">
-                    Tênis Nike Revolution 6 Next Nature Masculino
-                  </p>
-                  <p className="text-[12px]">Cor:</p>
-                  <p className="text-[12px]">Tamanho:</p>
-                </div>
-              </td>
-
-              <td className="text-center px-auto py-2">
-                <div className="flex items-center justify-center">
-                  <button
-                    className="bg-white border w-8 h-8 flex justify-center items-center rounded"
-                    onClick={removeItemBox}
-                  >
-                    -
-                  </button>
-                  <div className="mx-3">{valorBox}</div>
-                  <button
-                    className="bg-white border w-8 h-8 flex justify-center items-center rounded"
-                    onClick={addItemBox}
-                  >
-                    +
-                  </button>
-                </div>
-                <div className="underline text-[12px] mt-2 cursor-pointer">
-                  Remover item
-                </div>
-              </td>
-
-              <td className="text-center px-auto py-2">
-                <p className="font-bold">R$ 219,00</p>
-              </td>
-
-              <td className="text-center px-auto py-2">
-                <p className="font-bold">R$ 219,00</p>
-              </td>
-            </tr>
+            {ProductItens && ProductItens.length  > 0 && (
+              ProductItens.map((p, i) => (
+                <tr key={i} className="border-b border-t border-gray-200">
+                <td className="flex items-center px-auto py-2">
+                  <div className=" border max-w-[130px] max-h-[110px] my-2 flex justify-center rounded mr-3 p-1">
+                    <img src={p.image[0]} className="w-auto h-auto" alt="" />
+                  </div>
+                  <div className="space-y-auto">
+                    <p className="font-bold max-w-[14em]">
+                      {p.name}
+                    </p>
+                    <p className="text-[12px]">Cor:</p>
+                    <p className="text-[12px]">Tamanho:</p>
+                  </div>
+                </td>
+  
+                <td className="text-center px-auto py-2">
+                  <div className="flex items-center justify-center">
+                    <button
+                      className="bg-white border w-8 h-8 flex justify-center items-center rounded"
+                      onClick={removeItemBox}
+                    >
+                      -
+                    </button>
+                    <div className="mx-3">{valorBox}</div>
+                    <button
+                      className="bg-white border w-8 h-8 flex justify-center items-center rounded"
+                      onClick={addItemBox}
+                    >
+                      +
+                    </button>
+                  </div>
+                  <div className="underline text-[12px] mt-2 cursor-pointer">
+                    Remover item
+                  </div>
+                </td>
+  
+                <td className="text-center px-auto py-2">
+                  <p className="font-bold">{formatToBRL(p.price)}</p>
+                </td>
+  
+                <td className="text-center px-auto py-2">
+                  <p className="font-bold">{formatToBRL(p.price)}</p>
+                </td>
+              </tr>
+              ))
+            
+            )}
+            
           </tbody>
 
           <tfoot>
@@ -123,25 +131,25 @@ export const TableCart = () => {
         <div className="border"></div>
         <div className="flex justify-between">
           <p className="text-[var(--light-gray)] text-[14px]">SubTotal:</p>
-          <p>R$ 219,00</p>
+          <p>{formatToBRL(219.00)}</p>
         </div>
         <div className="flex justify-between">
           <p className="text-[var(--light-gray)] text-[14px]">Frete:</p>
-          <p>R$ 0,00</p>
+          <p>{formatToBRL(0.00)}</p>
         </div>
         <div className="flex justify-between">
           <p className="text-[var(--light-gray)]">Desconto:</p>
-          <p>R$ 30,00</p>
+          <p>{formatToBRL(30.00)}</p>
         </div>
         <div className="">
           <div className="flex justify-between">
             <p className="font-bold text-[18px]">TOTAL</p>
             <p className="text-[var(--error)] font-bold text-[18px]">
-              R$ 219,00
+            {formatToBRL(219.00)}
             </p>
           </div>
           <div className="flex justify-end text-[0.8em] text-[var(--light-gray)]">
-            ou 10x de R$ 21,00 sem juros
+            ou 10x de {formatToBRL(21.00)} sem juros
           </div>
         </div>
         <div className="flex justify-center">

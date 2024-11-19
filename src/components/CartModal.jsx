@@ -1,5 +1,6 @@
 import { useState } from "react";
 import Produtos from "../database/ProductItens"
+import { formatToBRL } from "../utils/FormatToBRL";
 function CartModal() {
   const purchaseOrders = [true];
 
@@ -7,12 +8,6 @@ function CartModal() {
     Produtos.reduce((acc, produto) => acc + produto.price, 0)
   );
 
-  const formatToBRL = (value) => {
-    return new Intl.NumberFormat("pt-BR", {
-      style: "currency",
-      currency: "BRL",
-    }).format(value);
-  };
 
   return (
     <section className="absolute right-5 lg:right-120 md:right-20 z-10 top-16 lg:top-24">
