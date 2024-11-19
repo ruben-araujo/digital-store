@@ -6,9 +6,9 @@ import MenuIcon from "../assets/Menu.svg";
 import SearchIcon from "../assets/Search.svg";
 import CartModal from "./CartModal";
 import { Context } from "../contexts/GlobalContexts";
-
+import Produtos from "../database/ProductItens"
 const Header = () => {
-  const {isMobileMenuOpen, setIsMobileMenuOpen} = useContext(Context)
+  const { isMobileMenuOpen, setIsMobileMenuOpen } = useContext(Context);
   const [isSearchBarOpen, setIsSearchBarOpen] = useState(false);
   const [isCartModalOpen, setIsCartModalOpen] = useState(false);
 
@@ -25,10 +25,6 @@ const Header = () => {
   const toggleCartModal = () => {
     setIsCartModalOpen(!isCartModalOpen);
   };
-
-  
-
-  
 
   return (
     <div>
@@ -50,13 +46,22 @@ const Header = () => {
               <img src={SearchIcon} alt="pesquisar" />
             </button>
 
-            <button className="text-gray-700">
+            <button className="text-gray-700 inline-block relative">
               <img
                 src={Cart}
                 alt="Carrinho"
                 className="w-6 h-6"
                 onClick={toggleCartModal}
               />
+              <span
+                className="absolute flex items-center justify-center w-4 h-4 top-0 right-0 bg-red-600 text-white text-xs"
+                style={{
+                  borderRadius: "50%",
+                  transform: "translate(50%, -50%)",
+                }}
+              >
+                {Produtos.length}
+                </span>
             </button>
           </div>
         </div>
@@ -87,13 +92,22 @@ const Header = () => {
                 Entrar
               </NavLink>
             </li>
-            <li>
+            <li className="inline-block relative">
               <img
                 src={Cart}
                 alt="Carrinho"
                 className="ml-6 w-6 h-6"
                 onClick={toggleCartModal}
               />
+              <span
+                className="absolute flex items-center justify-center w-4 h-4 top-0 right-0 bg-red-600 text-white text-xs"
+                style={{
+                  borderRadius: "50%",
+                  transform: "translate(50%, -50%)",
+                }}
+              >
+                {Produtos.length}
+              </span>
             </li>
           </ul>
         </nav>
@@ -138,7 +152,7 @@ const Header = () => {
             </li>
             <li className="relative cursor-pointer text-gray-700 font-bold group">
               <span className="block">
-              <NavLink
+                <NavLink
                   to={"/meus-pedidos"}
                   className={({ isActive }) =>
                     isActive
@@ -202,7 +216,6 @@ const Header = () => {
                         ? "text-[#C92071] leading-6 text-base cursor-pointer underline underline-offset-4"
                         : "text-[#474747] leading-6 text-base cursor-pointer"
                     }
-                   
                   >
                     Produtos
                   </NavLink>
@@ -220,13 +233,13 @@ const Header = () => {
             </ul>
 
             <div className="flex flex-col items-center gap-4">
-              <NavLink to={"/login"} className="w-full" >
+              <NavLink to={"/login"} className="w-full">
                 <button className="bg-[var(--primary)] w-full text-white font-bold py-2 px-10 rounded-lg hover:bg-[var(--tertiary)] cursor-pointer">
                   Entrar
                 </button>
               </NavLink>
 
-              <NavLink to={"/criarConta/formulario"} className="underline" >
+              <NavLink to={"/criarConta/formulario"} className="underline">
                 Cadastre-se
               </NavLink>
             </div>

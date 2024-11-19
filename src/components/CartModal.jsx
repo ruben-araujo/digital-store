@@ -2,7 +2,6 @@ import { useState } from "react";
 import Produtos from "../database/ProductItens"
 function CartModal() {
   const purchaseOrders = [true];
-  const [array, setArray] = useState([1]);
 
   const [total, setTotal] = useState(() =>
     Produtos.reduce((acc, produto) => acc + produto.price, 0)
@@ -25,7 +24,7 @@ function CartModal() {
           <div className="border-b border-gray-300"></div>
         </div>
         <div className="flex flex-grow flex-col gap-4 py-5 items-center justify-center overflow-hidden">
-          {array.length > 0 ? ( 
+          {Produtos.length > 0 ? ( 
             Produtos.map((p, i) => (
               <div key={i} className="flex items-center w-full gap-2 z-50">
                 <img src={p.image[0]} style={{maxWidth: "70px"}}  />
@@ -49,7 +48,7 @@ function CartModal() {
             </span>
           </div>
           <div className="flex justify-between mt-6 gap-3">
-            <p className="text-[#8F8F8F] font-normal text-[14px] leading-[34px] tracking-[0.75px] underline cursor-pointer" onClick={() => setArray([])}>
+            <p className="text-[#8F8F8F] font-normal text-[14px] leading-[34px] tracking-[0.75px] underline cursor-pointer" onClick={() => setTotal([])}>
               Esvaziar
             </p>
             <button
