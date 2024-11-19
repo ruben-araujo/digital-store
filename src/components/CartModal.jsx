@@ -24,11 +24,17 @@ function CartModal() {
           <div className="border-b border-gray-300"></div>
         </div>
         <div className="flex flex-grow flex-col gap-4 py-5 items-center justify-center overflow-hidden">
-          {Produtos.length > 0 ? ( 
+          {Produtos && Produtos.length > 0 ? ( 
             Produtos.map((p, i) => (
               <div key={i} className="flex items-center w-full gap-2 z-50">
-                <img src={p.image[0]} style={{maxWidth: "70px"}}  />
-                <p>{p.name}</p>
+                <img src={p.image[0]} style={{maxWidth: "70px",}}  />
+                <div>
+                  <p className="text-sm"><strong>{p.name}</strong></p>
+                  <div className="flex items-center gap-3 mt-2">
+                    <p className="text-base text-[var(--dark-gray-2)]"><strong>{formatToBRL(p.price)}</strong></p>
+                    <p className="text-xs line-through text-[var(--light-gray-2)]">{formatToBRL(p.priceDiscount)}</p>
+                  </div>
+                </div>
               </div>
             ))
            ) : (

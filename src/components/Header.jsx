@@ -92,6 +92,7 @@ const Header = () => {
                 Entrar
               </NavLink>
             </li>
+            {/* Carrinho de Compras */}
             <li className="inline-block relative">
               <img
                 src={Cart}
@@ -99,7 +100,8 @@ const Header = () => {
                 className="ml-6 w-6 h-6"
                 onClick={toggleCartModal}
               />
-              <span
+              {Produtos && Produtos.length > 0 && (
+                <span
                 className="absolute flex items-center justify-center w-4 h-4 top-0 right-0 bg-red-600 text-white text-xs"
                 style={{
                   borderRadius: "50%",
@@ -108,6 +110,8 @@ const Header = () => {
               >
                 {Produtos.length}
               </span>
+              )}
+              
             </li>
           </ul>
         </nav>
