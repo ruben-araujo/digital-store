@@ -1,7 +1,19 @@
+import { useState } from "react";
 import Produtos from "../database/ProductItens"
 function CartModal() {
   const purchaseOrders = [true];
   const array = [1];
+
+  const [total, setTotal] = useState(() =>
+    Produtos.reduce((acc, produto) => acc + produto.price, 0)
+  );
+
+  const formatToBRL = (value) => {
+    return new Intl.NumberFormat("pt-BR", {
+      style: "currency",
+      currency: "BRL",
+    }).format(value);
+  };
 
   return (
     <section className="absolute right-5 lg:right-120 md:right-20 z-10 top-16 lg:top-24">
@@ -30,10 +42,10 @@ function CartModal() {
           <div className="border-b mb-5 border-gray-300"></div>
           <div className="flex justify-between">
             <h3 className="text-[#474747] font-bold text-[14px] leading-[22px] tracking-[0.75px]">
-              Valor Total:
+              Valor Total: 
             </h3>
             <span className="text-[#474747] font-bold text-[14px] leading-[22px] tracking-[0.75px]">
-              R$ 00,00
+              {formatToBRL(total)}
             </span>
           </div>
           <div className="flex justify-between mt-6 gap-3">
