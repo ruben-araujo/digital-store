@@ -2,7 +2,7 @@ import { useState } from "react";
 import Produtos from "../database/ProductItens"
 function CartModal() {
   const purchaseOrders = [true];
-  const array = [1];
+  const [array, setArray] = useState([1]);
 
   const [total, setTotal] = useState(() =>
     Produtos.reduce((acc, produto) => acc + produto.price, 0)
@@ -49,7 +49,7 @@ function CartModal() {
             </span>
           </div>
           <div className="flex justify-between mt-6 gap-3">
-            <p className="text-[#8F8F8F] font-normal text-[14px] leading-[34px] tracking-[0.75px] underline">
+            <p className="text-[#8F8F8F] font-normal text-[14px] leading-[34px] tracking-[0.75px] underline cursor-pointer" onClick={() => setArray([])}>
               Esvaziar
             </p>
             <button
