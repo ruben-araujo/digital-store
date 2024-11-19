@@ -14,6 +14,7 @@ export default function Input(props) {
           value={props.value}
           id={props.id}
           placeholder={props.placeholder}
+          onChange={props.onChange}
           required
         />
       </div>
