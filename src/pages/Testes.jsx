@@ -1,9 +1,9 @@
-import {TableCart} from "../components/TableCart"
+import {MyCart} from "../components/MyCart"
 
 export const Testes = () => {
     return (
         <>
-            <TableCart/>
+            <MyCart/>
         </>
     )
 }

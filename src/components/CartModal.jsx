@@ -1,6 +1,7 @@
 import { useState } from "react";
 import Produtos from "../database/ProductItens"
 import { formatToBRL } from "../utils/FormatToBRL";
+import { Link } from "react-router-dom";
 function CartModal() {
   const purchaseOrders = [true];
 
@@ -57,7 +58,7 @@ function CartModal() {
 
     text-[#f5f5f5] bg-[#C92071] hover:bg-[#991956] disabled:bg-[#CCCCCC] disabled:cursor-not-allowed px-9 py-3 w-full sm:w-auto text-sm font-bold leading-5 tracking-wider rounded"
             >
-              Ver Carrinho
+              <Link to={"/meu-carrinho"}>Ver Carrinho</Link>
             </button>
           </div>
         </div>

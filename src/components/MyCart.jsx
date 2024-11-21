@@ -2,7 +2,7 @@ import { useState } from "react";
 import { formatToBRL } from "../utils/FormatToBRL";
 import ProductItens from "../database/ProductItens";
 
-export const TableCart = () => {
+export const MyCart = () => {
   const [quantities, setQuantities] = useState(
     ProductItens.reduce((acc, item) => {
       acc[item.id] = 1; // Inicializa com 1 unidade para cada produto

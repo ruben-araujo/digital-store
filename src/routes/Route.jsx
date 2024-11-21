@@ -14,6 +14,7 @@ import { PurchaseConfirmation } from "../pages/PurchaseConfirmation";
 import Layout from "../pages/Layout";
 import { MyOrders } from "../pages/MyOrders";
 import { MyProfile } from "../pages/MyProfile";
+import { MyCart } from "../components/MyCart";
 function AppRoutes() {
   return (
     <BrowserRouter>
@@ -26,6 +27,7 @@ function AppRoutes() {
           <Route path="/product-view/:id" element={<ProductViewPage />} />
           <Route path="/products" element={<ProductsPage />} />
           <Route path="/meus-pedidos" element={<MyOrders />} />
+          <Route path="/meu-carrinho" element={<MyCart />} />
           <Route path="/minhas-informacoes" element={<MyProfile />} />
           <Route path="/testes" element={<Testes />} />
           <Route path="/compras" element={<FinalizingPurchaseForm />} />
