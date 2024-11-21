@@ -21,7 +21,7 @@ function AppRoutes() {
       <ScrollToTop />
       <Routes>
         <Route path="/" element={<Navigate to="/home" replace />} />
-        <Route path="/" element={<Layout />}>
+        <Route element={<Layout />}>
           <Route path="/home" element={<HomePage />} />
           <Route path="/produtos" element={<ProductListingPage />} />
           <Route path="/product-view/:id" element={<ProductViewPage />} />
